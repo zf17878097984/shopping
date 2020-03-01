@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f68d4ebe-a2a2-420a-af1c-2906499bddd6" name="Default Changelist" comment="" />
+    <list default="true" id="f68d4ebe-a2a2-420a-af1c-2906499bddd6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/shopping/userController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/api-docs/api-docs.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/api-docs/api-docs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/YhYWq7kUXD6ERR0hhjRq47e4kfTZs2SM2KXLQPgx" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/YhYWq7kUXD6ERR0hhjRq47e4kfTZs2SM2KXLQPgx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,19 +121,19 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Controllers" />
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\shopping" />
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\manage" />
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\admin" />
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\resources\lang" />
       <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Home" />
       <recent name="C:\programSoft\phpstudy_pro\WWW\test\app\Http\Controllers" />
       <recent name="C:\programSoft\phpstudy_pro\WWW\test\app" />
       <recent name="C:\programSoft\phpstudy_pro\WWW\test\storage\api-docs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Controllers" />
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\shopping" />
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\manage" />
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\admin" />
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests" />
     </key>
   </component>
   <component name="RunManager">
@@ -214,7 +223,7 @@
       <workItem from="1582890923177" duration="2940000" />
       <workItem from="1582981742035" duration="307000" />
       <workItem from="1582982116961" duration="6782000" />
-      <workItem from="1583035370512" duration="2186000" />
+      <workItem from="1583035370512" duration="4052000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1583037567801</created>
@@ -223,11 +232,36 @@
       <option name="project" value="LOCAL" />
       <updated>1583037567801</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="第一次提交">
+      <created>1583037619203</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583037619203</updated>
+    </task>
+    <task id="LOCAL-00003" summary="第一次提交">
+      <created>1583037858404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583037858404</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交" />
@@ -255,10 +289,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2522" y="170" width="730" height="700" key="#phpunit.xml/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578966094406" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1583037580246">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1583037658299">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583037580246" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583037658299" />
     <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1582988832493">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

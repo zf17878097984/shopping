@@ -9,7 +9,7 @@ class userController extends Controller
 {
     /**
      * @OA\get(
-     *     path="/shopping/getUser",
+     *     path="/shopping/user",
      *     operationId="getUser",
      *     tags={"前台用户信息模块"},
      *     summary="获取登录用户的信息",

@@ -69,7 +69,7 @@ Route::group(['prefix'=>'/api/shopping'],function(){
 });
 
 Route::group(['prefix'=>'/api/shopping/user'],function(){
-    Route::get('/', 'shopping\userController@getUser');
+   // Route::get('/', 'shopping\userController@getUser');
 });
 
 Route::group(['prefix'=>'/api/shopping/address','middleware'=>['user.auth']],function (){
