@@ -68,8 +68,15 @@ Route::group(['prefix'=>'/api/shopping'],function(){
 
 });
 
-Route::group(['prefix'=>'/api/shopping/user'],function(){
-   // Route::get('/', 'shopping\userController@getUser');
+Route::group(['prefix'=>'/api/admin'],function(){
+    Route::get('/', 'manage\adminController@getAdminSession');
+    Route::put('/', 'manage\adminController@updateAdmin');
+});
+
+Route::group(['prefix'=>'/api/user/'],function(){
+    Route::get('/', 'manage\adminController@getUsersSession');
+    Route::put('/', 'manage\adminController@updateUser');
+
 });
 
 Route::group(['prefix'=>'/api/shopping/address','middleware'=>['user.auth']],function (){
