@@ -4,6 +4,7 @@ namespace App\Http\Controllers\shopping;
 
 use App\Http\Requests\AddressAddRequest;
 use App\Model\Address;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -26,7 +27,7 @@ class addressController extends Controller
      * )
      */
     public function getByUserId(){
-        $user=session('shopping');
+        $user=session('user');
         $data=Address::where('userId','=',$user[0]->id)->get();
         if (!$data->isEmpty()){
             return $this->success('获取数据成功',$data);
@@ -111,7 +112,8 @@ class addressController extends Controller
      * )
      */
     public function insert(AddressAddRequest $request){
-        $user=session('shopping');
+        $user=session('user');
+        if($user!=null){
         $address=Address::create([
             'name'=>$request->name,
             'tel'=>$request->tel,
@@ -120,6 +122,7 @@ class addressController extends Controller
         ]);
         if ($address){
             return $this->status(0,'添加成功');
+        }
         }
         return $this->fail('添加失败，请重新添加');
     }

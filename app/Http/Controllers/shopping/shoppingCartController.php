@@ -65,9 +65,9 @@ class shoppingCartController extends Controller
      */
     public function getById($id){
         $data=Shoppingcart::find($id);
-        $product=Product::find($data->productId);
-        $data->productId=$product;
         if ($data!=null){
+            $product=Product::find($data->productId);
+            $data->product=$product;
             return $this->success("查询成功",$data);
         }
         return $this->fail("未查询到该商品");
@@ -128,15 +128,28 @@ class shoppingCartController extends Controller
         }else{
             $number=$request->number;
         }
+        $shoppingCart=Shoppingcart::Where("userId","=",$user[0]->id)->where("productId","=",$request->productId)->first();
+
+        if ($shoppingCart==null){
         $sta=Shoppingcart::create([
             'productId'=>$request->productId,
             'userId'=>$user[0]->id,
             'number'=>$number
         ]);
-        if ($sta){
-            return $this->statusCode('0','添加成功！');
+            if ($sta){
+                return $this->statusCode('0','添加成功！');
+            }
+        }else{
+            $oldNumber=$shoppingCart->number;
+            $staUp=Shoppingcart::Where("userId","=",$user[0]->id)->where("productId","=",$request->productId)->update([
+                'number'=>$number+$oldNumber
+            ]);
+            if ($staUp){
+                return $this->statusCode('0','添加成功！');
+            }
         }
-        return $this->fail('添加失败！'.$sta);
+
+        return $this->fail($shoppingCart);
     }
 
 

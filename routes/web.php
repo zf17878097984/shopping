@@ -87,3 +87,7 @@ Route::group(['prefix'=>'/api/shopping/address','middleware'=>['user.auth']],fun
     Route::put('/','shopping\addressController@update');
 });
 
+Route::group(['prefix'=>'/api/shopping/order','middleware'=>['user.auth']],function(){
+    Route::post('/', 'shopping\orderController@addOrder');
+    Route::put('/pay', 'shopping\orderController@pay');
+});

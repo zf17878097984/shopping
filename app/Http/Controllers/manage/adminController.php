@@ -88,7 +88,7 @@ class adminController extends Controller
                 "tel"=>$request->tel,
             ]);
             if ($sta){
-               session(["user"=>User::find($data[0]->id)]);
+                session(["user"=>User::find($data[0]->id)]);
                 return $this->status(0,"修改成功");
             }
         }
@@ -147,8 +147,9 @@ class adminController extends Controller
                 "email"=>$request->email
             ]);
             if ($sta){
-                session(["admin"=>Admin::find($data[0]->id)]);
-                return $this->status(0,"修改成功");
+                $admin=Admin::find($data['id']);
+                $da=session(['admin'=>$admin]);
+                return $this->status(0,"修改成功"+$da);
             }
         }
         return $this->fail("您还未登录");
