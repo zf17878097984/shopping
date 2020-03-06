@@ -29,11 +29,26 @@ class shoppingCartController extends Controller
     public function getAll(){
         $user=session("user");
         $data=Shoppingcart::where('userId','=',$user[0]->id)->get();
+        $expire="";
+        foreach ($data as $key=>$val){
+            $val->product=$val->product;
+            $product=Product::find($val->productId);
+            if($product==null){
+                Shoppingcart::where("userId","=",$user[0]->id)->where("productId","=",$val->productId)->delete();
+                $expire++;
+            }
+        }
+        //重新查询把没过期的商品重新赋值
+        $data=Shoppingcart::where('userId','=',$user[0]->id)->get();
         foreach ($data as $key=>$val){
             $val->product=$val->product;
         }
         if (!$data->isEmpty()){
-            return $this->success("查询成功！",$data);
+            $s="";
+            if($expire>0){
+                $s=",共清理了".$expire."个过期商品";
+            }
+            return $this->success("查询成功".$s,$data);
         }
         return $this->fail("查询失败");
     }

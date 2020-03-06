@@ -16,4 +16,5 @@ return array(
     'e7223560d890eab89cda23685e711e2c' => $vendorDir . '/psy/psysh/src/Psy/functions.php',
     '0ccdf99b8f62f02c52cba55802e0c2e7' => $vendorDir . '/zircote/swagger-php/src/functions.php',
     'ac0aa5b57142c92aeadc397fa46b9d39' => $vendorDir . '/darkaonline/l5-swagger/src/helpers.php',
+    'f960e77410032f236cef8c56617b313e' => $vendorDir . '/overtrue/laravel-lang/src/helpers.php',
 );

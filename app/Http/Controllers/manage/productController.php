@@ -22,7 +22,7 @@ use App\Http\Controllers\Controller;
  *     )
  * ),
  * @OA\Server(
- *    url="http://140.143.186.207:8081/api/"
+ *    url="http://shopping/api/"
  * ),
  * @OA\SecurityScheme(
  *     type="oauth2",

@@ -6,6 +6,7 @@ use App\Model\Product;
 use App\Model\Type;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redis;
 
 class showController extends Controller
 {
@@ -85,6 +86,9 @@ class showController extends Controller
      */
     public function getByTypeId($typeId){
         $data=Product::where('typeId','=',$typeId)->get();
+        foreach ($data as $val){
+            $val->type=$val->type;
+        }
         if (!$data->isEmpty()){
             return $this->success("获取数据成功",$data);
         }
@@ -119,6 +123,7 @@ class showController extends Controller
     public function getById($id)
     {
         $data=Product::find($id);
+            $data->type=$data->type;
         if ($data!=null){
             return $this->success('查询成功',$data);
         }
@@ -143,6 +148,9 @@ class showController extends Controller
      */
     public function saleWell(){
         $data=Product::orderBy("sale","desc")->get();
+        foreach ($data as $val){
+            $val->type=$val->type;
+        }
         if($data!=null){
             return $this->success("获取数据成功",$data);
         }
@@ -167,6 +175,9 @@ class showController extends Controller
      */
     public function newest(){
         $data=Product::orderBy("createTime","desc")->get();
+        foreach ($data as $val){
+            $val->type=$val->type;
+        }
         if($data!=null){
             return $this->success("获取数据成功",$data);
         }

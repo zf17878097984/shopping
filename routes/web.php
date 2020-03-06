@@ -90,6 +90,10 @@ Route::group(['prefix'=>'/api/shopping/address','middleware'=>['user.auth']],fun
 
 Route::group(['prefix'=>'/api/shopping/order','middleware'=>['user.auth']],function(){
     Route::post('/', 'shopping\orderController@addOrder');
-    Route::put('/pay', 'shopping\orderController@pay');
+    Route::post('/batchAdd', 'shopping\orderController@batchAdd');
+    Route::put('/pay/{id}', 'shopping\orderController@pay');
     Route::get('/', 'shopping\orderController@getOrder');
+    Route::get('/test', 'shopping\orderController@test');
 });
+Route::get('/testRedis','redisController@testRedis');
+Route::get('/flush','redisController@flush');

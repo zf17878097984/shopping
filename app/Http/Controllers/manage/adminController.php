@@ -9,6 +9,7 @@ use App\Model\Admin;
 use App\Model\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redis;
 
 class adminController extends Controller
 {
