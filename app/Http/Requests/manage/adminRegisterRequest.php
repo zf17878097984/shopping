@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class adminRegisterRequest extends FormRequest
+class adminRegisterRequest extends BaseRequests
 {
     /**
      * Determine if the shopping is authorized to make this request.

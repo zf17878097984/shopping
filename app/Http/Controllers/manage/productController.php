@@ -184,7 +184,8 @@ class productController extends Controller
             'price' => $request->price,
             'describe' => $request->describe,
             'number'=>$number,
-            'typeId'=>$request->typeId
+            'typeId'=>$request->typeId,
+            'createTime'=>date('Y:m:d H:i:s')
         ]);
         if ($sta){
             return $this->statusCode('0','添加成功！');

@@ -60,12 +60,13 @@ Route::group(['prefix'=>'/api/shopping/wallet','middleware'=>['user.auth']],func
     Route::put('/addCredit', 'shopping\walletController@addCredit');
 });
 
-Route::group(['prefix'=>'/api/shopping'],function(){
+Route::group(['prefix'=>'/api/shopping/product'],function(){
     Route::get('/', 'shopping\showController@getAll');
     Route::get('/type', 'shopping\showController@getTypeAll');
     Route::get('/getByTypeId/{typeId}', 'shopping\showController@getByTypeId');
-    Route::get('/{id}', 'shopping\showController@getById');
-
+    Route::get('/getById/{id}', 'shopping\showController@getById');
+    Route::get('/saleWell', 'shopping\showController@saleWell');
+    Route::get('/newest', 'shopping\showController@newest');
 });
 
 Route::group(['prefix'=>'/api/admin'],function(){
@@ -90,4 +91,5 @@ Route::group(['prefix'=>'/api/shopping/address','middleware'=>['user.auth']],fun
 Route::group(['prefix'=>'/api/shopping/order','middleware'=>['user.auth']],function(){
     Route::post('/', 'shopping\orderController@addOrder');
     Route::put('/pay', 'shopping\orderController@pay');
+    Route::get('/', 'shopping\orderController@getOrder');
 });

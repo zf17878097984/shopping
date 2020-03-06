@@ -45,8 +45,17 @@ class walletController extends Controller
      *         description="金额",
      *         required=false,
      *         in="query",
-     *         @OA\Schema(
+     *       @OA\Schema(
      *             type="decimal"
+     *         )
+     *     ),
+     *       @OA\Parameter(
+     *         name="rechargeCode",
+     *         description="充值码",
+     *         required=false,
+     *         in="query",
+     *         @OA\Schema(
+     *             type="String"
      *         )
      *     ),
      *     @OA\RequestBody(
@@ -73,12 +82,15 @@ class walletController extends Controller
         $oldMoney=$user->money;
         $newMoney=$request->money;
         $sum=$oldMoney+$newMoney;
-        $data=$user->update([
-            'money'=>$sum
-        ]);
+
+        if($request->rechargeCode==6666){
+            $data=$user->update([
+                'money'=>$sum
+            ]);
         if ($data){
             return $this->status(0,'充值成功');
         }
-        return $this->fail("未知错误：充值失败");
+        }
+        return $this->fail("充值码无效,请重新输入");
     }
 }

@@ -11,7 +11,7 @@ class showController extends Controller
 {
     /**
      * @OA\get(
-     *     path="/shopping",
+     *     path="/shopping/product",
      *     operationId="index",
      *     tags={"前台商品展示模块"},
      *     summary="获取全部商品信息",
@@ -36,7 +36,7 @@ class showController extends Controller
 
     /**
      * @OA\get(
-     *     path="/shopping/type",
+     *     path="/shopping/product/type",
      *     operationId="getTypeAll",
      *     tags={"前台商品展示模块"},
      *     summary="获取全部商品分类信息",
@@ -60,7 +60,7 @@ class showController extends Controller
 
     /**
      * @OA\get(
-     *     path="/shopping/getByTypeId/{typeId}",
+     *     path="/shopping/product/getByTypeId/{typeId}",
      *     operationId="getByTypeId",
      *     tags={"前台商品展示模块"},
      *     summary="获取指定商品分类的商品",
@@ -93,7 +93,7 @@ class showController extends Controller
 
     /**
      * @OA\get(
-     *     path="/shopping/{id}",
+     *     path="/shopping/product/getById/{id}",
      *     operationId="getById",
      *     tags={"前台商品展示模块"},
      *     summary="获取指定id的商品",
@@ -125,4 +125,51 @@ class showController extends Controller
         return $this->fail('没有该商品');
     }
 
+    /**
+     * @OA\get(
+     *     path="/shopping/product/saleWell",
+     *     operationId="saleWell",
+     *     tags={"前台商品展示模块"},
+     *     summary="获取热销商品",
+     *     description="前台商品展示模块",
+     *     @OA\Response(
+     *         response=200,
+     *         description="The result of tasks"
+     *     ),
+     *     security={
+     *         {"passport": {}},
+     *     }
+     * )
+     */
+    public function saleWell(){
+        $data=Product::orderBy("sale","desc")->get();
+        if($data!=null){
+            return $this->success("获取数据成功",$data);
+        }
+        return $this->fail("查询失败");
+    }
+
+    /**
+     * @OA\get(
+     *     path="/shopping/product/newest",
+     *     operationId="saleWell",
+     *     tags={"前台商品展示模块"},
+     *     summary="获取最新商品",
+     *     description="前台商品展示模块",
+     *     @OA\Response(
+     *         response=200,
+     *         description="The result of tasks"
+     *     ),
+     *     security={
+     *         {"passport": {}},
+     *     }
+     * )
+     */
+    public function newest(){
+        $data=Product::orderBy("createTime","desc")->get();
+        if($data!=null){
+            return $this->success("获取数据成功",$data);
+        }
+        return $this->fail("查询失败");
+    }
 }

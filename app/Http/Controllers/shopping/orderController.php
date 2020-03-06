@@ -103,6 +103,7 @@ class orderController extends Controller
         }
         return $this->fail("获取数据失败");
     }
+
     /**
      *
      * @OA\put(
@@ -170,5 +171,30 @@ class orderController extends Controller
             return $this->fail("您的余额不足");
         }
         return $this->fail("已经超过付款时间，请重新提交");
+    }
+
+    /**
+     * @OA\get(
+     *     path="/shopping/order",
+     *     operationId="getOrder11",
+     *     tags={"前台订单模块"},
+     *     summary="获取登录用户的订单",
+     *     description="前台订单模块",
+     *     @OA\Response(
+     *         response=200,
+     *         description="The result of tasks"
+     *     ),
+     *     security={
+     *         {"passport": {}},
+     *     }
+     * )
+     */
+    public function getOrder(){
+        $user=Session("user");
+        $order=Order::where("userI d","=",$user[0]->id)->get();
+        if ($order!=null){
+            return $this->success("获取数据成功",$order);
+        }
+        return $this->fail("您还没有提交过订单");
     }
 }
