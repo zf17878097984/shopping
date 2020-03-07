@@ -152,7 +152,7 @@ class shoppingCartController extends Controller
             'number'=>$number
         ]);
             if ($sta){
-                return $this->statusCode('0','添加成功！');
+                return $this->status(0,'添加成功！');
             }
         }else{
             $oldNumber=$shoppingCart->number;
@@ -160,11 +160,11 @@ class shoppingCartController extends Controller
                 'number'=>$number+$oldNumber
             ]);
             if ($staUp){
-                return $this->statusCode('0','添加成功！');
+                return $this->status(0,'添加成功！');
             }
         }
 
-        return $this->fail($shoppingCart);
+        return $this->fail("添加失败，请重新提交");
     }
 
 
@@ -298,13 +298,23 @@ class shoppingCartController extends Controller
                 $erro++;
                 continue;
             }
-            $sta=Shoppingcart::create([
-                'productId'=>$productArr[$i],
-                'number'=>$numberArr[$i],
-                'userId'=>$user[0]->id
-            ]);
-            if ($sta){
-                $success++;
+            $shoppingCart=Shoppingcart::where("userId","=",$user[0]->id)->where("productId","=",$productArr[$i])->first();
+            if($shoppingCart!=null){
+                $sta=$shoppingCart->update([
+                    "number"=>$shoppingCart->number+$numberArr[$i]
+                ]);
+                if ($sta){
+                    $success++;
+                }
+            }else{
+                $sta=Shoppingcart::create([
+                    'productId'=>$productArr[$i],
+                    'number'=>$numberArr[$i],
+                    'userId'=>$user[0]->id
+                ]);
+                if ($sta){
+                    $success++;
+                }
             }
         }
         return $this->status(0,"添加了".$success."个商品到购物车,".$erro.'个商品过期或不存在');

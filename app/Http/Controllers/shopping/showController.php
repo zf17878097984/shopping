@@ -6,6 +6,7 @@ use App\Model\Product;
 use App\Model\Type;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redis;
 
 class showController extends Controller
@@ -52,7 +53,9 @@ class showController extends Controller
      * )
      */
     public function getTypeAll(){
-        $data=Type::all();
+        $data = Cache::remember('types', 1, function() {
+            return Type::all();
+        });
         if ($data!=null){
             return $this->success("查询成功！",$data);
         }
@@ -160,7 +163,7 @@ class showController extends Controller
     /**
      * @OA\get(
      *     path="/shopping/product/newest",
-     *     operationId="saleWell",
+     *     operationId="newest",
      *     tags={"前台商品展示模块"},
      *     summary="获取最新商品",
      *     description="前台商品展示模块",

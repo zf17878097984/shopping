@@ -6,6 +6,7 @@ use App\Http\Requests\adminRegisterRequest;
 use App\Model\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redis;
 
 class adminLoginController extends Controller
@@ -48,7 +49,6 @@ class adminLoginController extends Controller
         $admin=Admin::where("name",'=',$request->name)->where('password','=',$request->password)->get();
         if (!$admin->isEmpty()){
             session(['admin' => $admin]);
-            Redis::set("admin",$admin);
             return $this->status(0,'登录成功');
         }
         return $this->fail("密码或账户名错误");
