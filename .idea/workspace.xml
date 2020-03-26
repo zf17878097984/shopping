@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f68d4ebe-a2a2-420a-af1c-2906499bddd6" name="Default Changelist" comment="第一次提交">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/manage/adminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/manage/adminLoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/manage/productController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/manage/productController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/shopping/shoppingCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/shopping/shoppingCartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/shopping/showController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/shopping/showController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/api-docs/api-docs.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/api-docs/api-docs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,19 +128,19 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Controllers" />
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\shopping" />
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\manage" />
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\admin" />
-      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\resources\lang" />
       <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Home" />
       <recent name="C:\programSoft\phpstudy_pro\WWW\test\app\Http\Controllers" />
       <recent name="C:\programSoft\phpstudy_pro\WWW\test\app" />
       <recent name="C:\programSoft\phpstudy_pro\WWW\test\storage\api-docs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Controllers" />
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\shopping" />
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\manage" />
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests\admin" />
+      <recent name="C:\programSoft\phpstudy_pro\WWW\shopping\app\Http\Requests" />
     </key>
   </component>
   <component name="RunManager">
@@ -244,6 +242,9 @@
       <workItem from="1583474037490" duration="16377000" />
       <workItem from="1583497176930" duration="7100000" />
       <workItem from="1583565809969" duration="11618000" />
+      <workItem from="1584359470116" duration="1044000" />
+      <workItem from="1585124483329" duration="16779000" />
+      <workItem from="1585202641749" duration="9683000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1583037567801</created>
@@ -304,11 +305,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="474" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1582984912752" />
-    <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583500321637">
+    <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585218122276">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="2610" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578038422236" />
-    <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583500321637" />
+    <state x="552" y="218" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585218122276" />
     <state x="2522" y="170" width="730" height="700" key="#phpunit.xml" timestamp="1578966094406">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -322,10 +323,10 @@
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578706799404" />
     <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583414548132" />
-    <state x="467" y="209" key="NewPhpClassDialog" timestamp="1583315365959">
+    <state x="467" y="209" key="NewPhpClassDialog" timestamp="1585140566107">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="467" y="209" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1583315365959" />
+    <state x="467" y="209" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1585140566107" />
     <state x="270" y="54" key="SettingsEditor" timestamp="1583240022844">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -334,12 +335,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="540" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1580558746222" />
-    <state x="493" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1583566601511">
+    <state x="493" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1585207715018">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="493" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1578878363301" />
     <state x="2536" y="344" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578983610876" />
-    <state x="493" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583566601511" />
+    <state x="493" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585207715018" />
     <state x="336" y="15" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583232564711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -353,10 +354,10 @@
     </state>
     <state x="2536" y="240" width="672" height="677" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578709657371" />
     <state x="493" y="190" width="538" height="537" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1583232017136" />
-    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1583571022617">
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1585217944690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1578886690131" />
-    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583571022617" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585217944690" />
   </component>
 </project>

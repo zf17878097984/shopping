@@ -35,7 +35,7 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             //\Illuminate\Session\Middleware\AuthenticateSession::class,
             //\Illuminate\View\Middleware\ShareErrorsFromSession::class,
-          //  \App\Http\Middleware\VerifyCsrfToken::class,
+            //\App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -61,5 +61,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'user.auth'=>\App\Http\Middleware\LoginUserMiddleware::class,
         'admin.auth'=>\App\Http\Middleware\LoginAdminMiddleware::class,
+        'authority'=> \App\Http\Middleware\AuthorityMiddlware::class,
+        'admin.authority'=> \App\Http\Middleware\AdminAuthorityMiddleware::class,
     ];
 }

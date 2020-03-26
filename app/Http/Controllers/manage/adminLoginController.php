@@ -4,10 +4,9 @@ namespace App\Http\Controllers\manage;
 
 use App\Http\Requests\adminRegisterRequest;
 use App\Model\Admin;
+use App\Model\Role;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Redis;
 
 class adminLoginController extends Controller
 {
@@ -48,6 +47,7 @@ class adminLoginController extends Controller
     public function login(Request $request){
         $admin=Admin::where("name",'=',$request->name)->where('password','=',$request->password)->get();
         if (!$admin->isEmpty()){
+            $admin[0]->role=$admin[0]->role;
             session(['admin' => $admin]);
             return $this->status(0,'登录成功');
         }
@@ -133,7 +133,8 @@ class adminLoginController extends Controller
         $sta=Admin::create([
             'name'=>$request->name,
             'email'=>$request->email,
-            'password'=>$request->password
+            'password'=>encrypt($request->password),
+            'roleId'=>1
         ]);
         if ($sta){
             return $this->status(0,'恭喜您注册成功');

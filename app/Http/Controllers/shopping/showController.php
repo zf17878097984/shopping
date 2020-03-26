@@ -53,9 +53,7 @@ class showController extends Controller
      * )
      */
     public function getTypeAll(){
-        $data = Cache::remember('types', 1, function() {
-            return Type::all();
-        });
+        $data=Type::all();
         if ($data!=null){
             return $this->success("查询成功！",$data);
         }
